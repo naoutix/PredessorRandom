@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Dary Léo">
+        <meta name="description" content="Bienvenue au Apex random generator">
+        <meta property="og:image" content="css/apex_15.png">
+        <meta property="og:description" content="Tu en as marre de jouer tout le temps la meme legends???
+        Et bien ques t'attend GO GO GO GO.">
+        <meta property="og:title" content="Random Apex Generator">
+        <!--
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <script src="mon-fichier-js.js"></script>
+
+        -->
+        <title> RANDOM APEX GENERATOR </title>
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/toggle.css">
+        <link rel="stylesheet" href="css/red_button.css">
+        <link rel="stylesheet" href="css/dropdown_menu.css">
+    </head>
+    <body>        
+        <div class="Reminder">
+            <label>OPTIONS</label>
+        </div>
+        <input type="checkbox" id="active" value="">
+        <label for="active" class="menu-btn"><span></span></label>
+        <label for="active" class="close"></label>
+        <div class="wrapper">
+        <ul>
+            <li>
+                <div class="Name">
+                    <label> SWITCH MODE TRIO/DUO </label>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="mode" checked >
+                    <span class="slider"></span>
+                    <span class="labels" data-on="TRIO" data-off="DUO"></span>
+                </label>
+            </li>
+            <li>
+                <div class="Name">
+                    <label> WEAPON MODE </label>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="modeWeapon" unchecked >
+                    <span class="slider"></span>
+                    <span class="labels" data-on="ON" data-off="OFF"></span>
+                </label>
+            </li>
+            <li>
+                <div class="Name">
+                    <label> MAP MODE </label>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="modeMAP" unchecked >
+                    <span class="slider"></span>
+                    <span class="labels" data-on="ON" data-off="OFF"></span>
+                </label>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Legends Select 1</button>
+                    <div class="dropdown-content">
+                        <table class="navbox" cellspacing="0">
+                            <tbody>
+                                <td style="padding:2px;">
+                                    <table id="LegendeSelector1" cellspacing="0" data-expandtext="show" data-collapsetext="hide">
+                                        <tbody>
+                                            <tr>
+                                                <th colspan="7" class="navbox-title">
+                                                    <span class="" style="font-size:110%;">Legends<img src="images/Menu/Apex_Legends_Icon.webp"/> Player 1</span>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td class="navbox-group">Assault</td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                            <label class="labelS"><input type="checkbox" name="checkbox" value="bangalore" checked>Bangalore<img src="images/Menu/Portrait_Bangalore_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                            <label class="labelS"><input type="checkbox" name="checkbox" value="fuse" checked>Fuse<img src="images/Menu/Portrait_Fuse_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                            <label class="labelS"><input type="checkbox" name="checkbox" value="ash" checked>Ash<img src="images/Menu/Portrait_Ash_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                            <label class="labelS"><input type="checkbox" name="checkbox" value="madmaggie" checked>Mad maggie<img src="images/Menu/Portrait_Mad_Maggie_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                            <label class="labelS"><input type="checkbox" name="checkbox" value="ballistic" checked>Ballistic<img src="images/Menu/Portrait_Ballistic_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="navbox-group">Skirmisher</td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="pathfinder" checked>Pathfinder<img src="images/Menu/Portrait_Pathfinder_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="wraith" checked>Wraith<img src="images/Menu/Portrait_Wraith_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="octane" checked>Octane<img src="images/Menu/Portrait_Octane_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                            <label class="labelS"><input type="checkbox" name="checkbox" value="revenant" checked>Revenant<img src="images/Menu/Portrait_Revenant_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="horizon" checked>Horizon<img src="images/Menu/Portrait_Horizon_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="valkyrie" checked>Valkyrie<img src="images/Menu/Portrait_Valkyrie_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="navbox-group">Recon</td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="bloodhound" checked>Bloodhound<img src="images/Menu/Portrait_Bloodhound_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="crypto" checked>Crypto<img src="images/Menu/Portrait_Crypto_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="seer" checked>Seer<img src="images/Menu/Portrait_Seer_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="vantage" checked>Vantage<img src="images/Menu/Portrait_Vantage_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="navbox-group">Support</td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="gibraltar" checked>Gibraltar<img src="images/Menu/Portrait_Gibraltar_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="lifeline" checked>Lifeline<img src="images/Menu/Portrait_Lifeline_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="mirage" checked>Mirage<img src="images/Menu/Portrait_Mirage_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="loba" checked>Loba<img src="images/Menu/Portrait_Loba_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="newcastle" checked>Newcastle<img src="images/Menu/Portrait_Newcastle_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="conduit" checked>Conduit<img src="images/Menu/Portrait_Conduit_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="navbox-group">Controller</td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="caustic" checked>Caustic<img src="images/Menu/Portrait_Caustic_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="wattson" checked>Wattson<img src="images/Menu/Portrait_Wattson_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="rampart" checked>Rampart<img src="images/Menu/Portrait_Rampart_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="catalyst" checked>Catalyst<img src="images/Menu/Portrait_Catalyst_square.webp"/></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tbody>
+                        </table>   
+                    </div>
+                </div>
+                <input type="text" id="CodeLegends1" pattern="0x[0-9a-fA-F]{7}([0-9a-fA-F]{7})?">       
+            </li>
+            <li>
+                <div class="dropdown">
+                <button class="dropbtn" id="Select2">Legends Select 2</button>
+                <div class="dropdown-content" id="content2">
+                    <table class="navbox" cellspacing="0">
+                        <tbody>
+                            <td style="padding:2px;">
+                                <table id="LegendeSelector2" cellspacing="0" data-expandtext="show" data-collapsetext="hide">
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="7" class="navbox-title">
+                                                <span class="" style="font-size:110%;">Legends<img src="images/Menu/Apex_Legends_Icon.webp"/> Player 2</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Assault</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="bangalore" checked>Bangalore<img src="images/Menu/Portrait_Bangalore_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="fuse" checked>Fuse<img src="images/Menu/Portrait_Fuse_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="ash" checked>Ash<img src="images/Menu/Portrait_Ash_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="madmaggie" checked>Mad maggie<img src="images/Menu/Portrait_Mad_Maggie_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="ballistic" checked>Ballistic<img src="images/Menu/Portrait_Ballistic_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Skirmisher</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="pathfinder" checked>Pathfinder<img src="images/Menu/Portrait_Pathfinder_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="wraith" checked>Wraith<img src="images/Menu/Portrait_Wraith_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="octane" checked>Octane<img src="images/Menu/Portrait_Octane_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="revenant" checked>Revenant<img src="images/Menu/Portrait_Revenant_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="horizon" checked>Horizon<img src="images/Menu/Portrait_Horizon_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="valkyrie" checked>Valkyrie<img src="images/Menu/Portrait_Valkyrie_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Recon</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="bloodhound" checked>Bloodhound<img src="images/Menu/Portrait_Bloodhound_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="crypto" checked>Crypto<img src="images/Menu/Portrait_Crypto_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="seer" checked>Seer<img src="images/Menu/Portrait_Seer_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="vantage" checked>Vantage<img src="images/Menu/Portrait_Vantage_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Support</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="gibraltar" checked>Gibraltar<img src="images/Menu/Portrait_Gibraltar_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="lifeline" checked>Lifeline<img src="images/Menu/Portrait_Lifeline_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="mirage" checked>Mirage<img src="images/Menu/Portrait_Mirage_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="loba" checked>Loba<img src="images/Menu/Portrait_Loba_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="newcastle" checked>Newcastle<img src="images/Menu/Portrait_Newcastle_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="conduit" checked>Conduit<img src="images/Menu/Portrait_Conduit_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Controller</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="caustic" checked>Caustic<img src="images/Menu/Portrait_Caustic_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="wattson" checked>Wattson<img src="images/Menu/Portrait_Wattson_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="rampart" checked>Rampart<img src="images/Menu/Portrait_Rampart_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="catalyst" checked>Catalyst<img src="images/Menu/Portrait_Catalyst_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tbody>
+                    </table>                   
+                </div>
+                </div>
+                <input type="text" id="CodeLegends2" pattern="0x[0-9a-fA-F]{7}([0-9a-fA-F]{7})?">
+
+            </li>
+            <li id="ThirdPlayerMenuToHide">
+                <div class="dropdown" id="ThirdPlayerMenu">
+                <button class="dropbtn" id="Select3" >Legends Select 3</button>
+                <div class="dropdown-content" id="content3">
+                    <table class="navbox" cellspacing="0">
+                        <tbody>
+                            <td style="padding:2px;">
+                                <table id="LegendeSelector3" cellspacing="0" data-expandtext="show" data-collapsetext="hide">
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="7" class="navbox-title">
+                                                <span class="" style="font-size:110%;">Legends<img src="images/Menu/Apex_Legends_Icon.webp"/> Player 3</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Assault</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="bangalore" checked>Bangalore<img src="images/Menu/Portrait_Bangalore_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="fuse" checked>Fuse<img src="images/Menu/Portrait_Fuse_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="ash" checked>Ash<img src="images/Menu/Portrait_Ash_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="madmaggie" checked>Mad maggie<img src="images/Menu/Portrait_Mad_Maggie_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="ballistic" checked>Ballistic<img src="images/Menu/Portrait_Ballistic_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Skirmisher</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="pathfinder" checked>Pathfinder<img src="images/Menu/Portrait_Pathfinder_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="wraith" checked>Wraith<img src="images/Menu/Portrait_Wraith_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="octane" checked>Octane<img src="images/Menu/Portrait_Octane_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                        <label class="labelS"><input type="checkbox" name="checkbox" value="revenant" checked>Revenant<img src="images/Menu/Portrait_Revenant_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="horizon" checked>Horizon<img src="images/Menu/Portrait_Horizon_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="valkyrie" checked>Valkyrie<img src="images/Menu/Portrait_Valkyrie_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Recon</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="bloodhound" checked>Bloodhound<img src="images/Menu/Portrait_Bloodhound_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="crypto" checked>Crypto<img src="images/Menu/Portrait_Crypto_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="seer" checked>Seer<img src="images/Menu/Portrait_Seer_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="vantage" checked>Vantage<img src="images/Menu/Portrait_Vantage_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Support</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="gibraltar" checked>Gibraltar<img src="images/Menu/Portrait_Gibraltar_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="lifeline" checked>Lifeline<img src="images/Menu/Portrait_Lifeline_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="mirage" checked>Mirage<img src="images/Menu/Portrait_Mirage_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="loba" checked>Loba<img src="images/Menu/Portrait_Loba_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="newcastle" checked>Newcastle<img src="images/Menu/Portrait_Newcastle_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="conduit" checked>Conduit<img src="images/Menu/Portrait_Conduit_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="navbox-group">Controller</td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="caustic" checked>Caustic<img src="images/Menu/Portrait_Caustic_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="wattson" checked>Wattson<img src="images/Menu/Portrait_Wattson_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="rampart" checked>Rampart<img src="images/Menu/Portrait_Rampart_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div style="padding:0em 0.25em">
+                                                    <label class="labelS"><input type="checkbox" name="checkbox" value="catalyst" checked>Catalyst<img src="images/Menu/Portrait_Catalyst_square.webp"/></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tbody>
+                    </table>   
+                </div>
+            </div>
+            <input type="text" id="CodeLegends3" pattern="0x[0-9a-fA-F]{7}([0-9a-fA-F]{7})?">
+            </li>
+            <li>
+                <div class="Name">
+                <label>
+                Code: All Legends 0x1FFFFFF,smurf 0x10C2380
+                </label>
+            </div>
+            </li>
+        </ul>
+        </div>
+        <!--SWITCH MODE-->
+
+        <!--Generate Button-->
+        <div class="wrapper2">
+            <button class="red_button" id="generate"><span>GO!</span></button>     
+        </div>
+
+        <!--Name Player-->
+        <div class="wrapper2">
+            <div class="Name">
+                <input type="text" class="Player p1" id="name1" placeholder="< Player 1 name>" />
+            </div>
+            <div class="Name">
+                <input type="text" class="Player p2" id="name2" placeholder="< Player 2 name>" />
+            </div>
+            <div class="Name" id="ThirdPlayerName">
+                <input type="text" class="Player p3" id="name3" placeholder="< Player 3 name>"/>
+            </div>
+        </div>
+
+        <!-- Selector Roulette Front-->
+        <div class="wrapper2">
+            <div class="box"><img src="images/random1.gif" alt="Teammate N°1" class="cover" id="team1"></div>
+            <div class="box"><img src="images/random2.gif" alt="Teammate N°2" class="cover" id="team2"></div>
+            <div class="box" id="ThirdPlayerBox"><img src="images/random3.gif" alt="Teammate N°3" class="cover" id="team3"></div>
+        </div>
+
+        <!-- Name Roulette display-->
+        <div class="wrapper2">
+            <label class="LName P1" id="OutP1"> ??? </label>
+            <label class="LName P2" id="OutP2"> ??? </label>
+            <label class="LName P3" id="OutP3"> ??? </label>
+        </div>
+        <!-- Roulette WEAPON display-->
+        <div id="WEAPON ROULETTE">
+            <div class="wrapper2">
+                <div class="box weapon" id="weapon1Box"><img src="images/weapons/randomWeapon1.gif" alt="Weapon set" id="weapon1"></div>
+                <div class="box weapon" id="weapon2Box"><img src="images/weapons/randomWeapon2.gif" alt="Weapon set" id="weapon2"></div>
+            </div>
+            <!-- Name Roulette WEAPON display-->
+            <div class="wrapper2" id="weaponDisplay">
+                <label class="weaponName P1" id="weapon1Name"> ??? </label>
+                <label class="weaponName P2" id="weapon2Name"> ??? </label>
+            </div>
+        </div>
+        <div id="Map Roulette">
+            <div class="wrapper2" id="mapChoose">
+                <select id="Map Select">
+                    <option value="">--Choose Map--</option>
+                    <option value="Kings_Canyon" id="Kings_Canyon" selected>Kings Canyon</option>
+                    <option value="Worlds_Edge" id="Worlds_Edge">Worlds Edge</option>
+                    <option value="Olympus" id="Olympus">Olympus</option>
+                    <option value="Storm_Point" id="Storm_Point">Storm Point</option>
+                    <option value="Broken_Moon" id="Broken_Moon">Broken Moon</option>
+                </select>
+            </div>
+            <!-- Roulette POI-->
+            <div class="wrapper2" id="POIDisplay">
+                <div class="box POI"><img src="images/maps/Broken_Moon_POI/Random_sky.gif" alt="POI set" id="POI_sky"></div>
+                <div class="box POI"><img src="images/maps/Broken_Moon_POI/Random_base.gif"alt="POI set" id="POI_base"></div>
+                <div class="box POI"><img src="images/maps/Broken_Moon_POI/Random_view.gif"alt="POI set" id="POI_view"></div>
+            </div>
+        </div>
+      <!-- Script-->
+        <script src="script/main.js" type="module"></script>
+        <script src="script/button.js"></script>
+    </body>
+</html>
