@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="shortcut icon" type="image/x-icon" href="css/favicon.ico" />
         <meta charset="utf-8">
         <meta name="author" content="Dary Léo">
-        <meta name="description" content="Bienvenue au Apex random generator">
-        <meta property="og:image" content="css/apex_15.png">
-        <meta property="og:description" content="Tu en as marre de jouer tout le temps la meme legends???
+        <meta name="description" content="Bienvenue sur Predecessor random generator">
+        <meta property="og:image" content="css/favicon.png">
+        <meta property="og:description" content="Tu en as marre de jouer tout le temps la meme persos???
         Et bien ques t'attend GO GO GO GO.">
         <meta property="og:title" content="Random Apex Generator">
         <!--
@@ -14,7 +15,7 @@
         <script src="mon-fichier-js.js"></script>
 
         -->
-        <title> RANDOM APEX GENERATOR </title>
+        <title> RANDOM PREDECESSOR GENERATOR </title>
         <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/toggle.css">
@@ -30,36 +31,6 @@
         <label for="active" class="close"></label>
         <div class="wrapper">
         <ul>
-            <li>
-                <div class="Name">
-                    <label> SWITCH MODE TRIO/DUO </label>
-                </div>
-                <label class="toggle">
-                    <input type="checkbox" id="mode" checked >
-                    <span class="slider"></span>
-                    <span class="labels" data-on="TRIO" data-off="DUO"></span>
-                </label>
-            </li>
-            <li>
-                <div class="Name">
-                    <label> WEAPON MODE </label>
-                </div>
-                <label class="toggle">
-                    <input type="checkbox" id="modeWeapon" unchecked >
-                    <span class="slider"></span>
-                    <span class="labels" data-on="ON" data-off="OFF"></span>
-                </label>
-            </li>
-            <li>
-                <div class="Name">
-                    <label> MAP MODE </label>
-                </div>
-                <label class="toggle">
-                    <input type="checkbox" id="modeMAP" unchecked >
-                    <span class="slider"></span>
-                    <span class="labels" data-on="ON" data-off="OFF"></span>
-                </label>
-            </li>
             <li>
                 <div class="dropdown">
                     <button class="dropbtn">Legends Select 1</button>
@@ -591,36 +562,6 @@
             <label class="LName P1" id="OutP1"> ??? </label>
             <label class="LName P2" id="OutP2"> ??? </label>
             <label class="LName P3" id="OutP3"> ??? </label>
-        </div>
-        <!-- Roulette WEAPON display-->
-        <div id="WEAPON ROULETTE">
-            <div class="wrapper2">
-                <div class="box weapon" id="weapon1Box"><img src="images/weapons/randomWeapon1.gif" alt="Weapon set" id="weapon1"></div>
-                <div class="box weapon" id="weapon2Box"><img src="images/weapons/randomWeapon2.gif" alt="Weapon set" id="weapon2"></div>
-            </div>
-            <!-- Name Roulette WEAPON display-->
-            <div class="wrapper2" id="weaponDisplay">
-                <label class="weaponName P1" id="weapon1Name"> ??? </label>
-                <label class="weaponName P2" id="weapon2Name"> ??? </label>
-            </div>
-        </div>
-        <div id="Map Roulette">
-            <div class="wrapper2" id="mapChoose">
-                <select id="Map Select">
-                    <option value="">--Choose Map--</option>
-                    <option value="Kings_Canyon" id="Kings_Canyon" selected>Kings Canyon</option>
-                    <option value="Worlds_Edge" id="Worlds_Edge">Worlds Edge</option>
-                    <option value="Olympus" id="Olympus">Olympus</option>
-                    <option value="Storm_Point" id="Storm_Point">Storm Point</option>
-                    <option value="Broken_Moon" id="Broken_Moon">Broken Moon</option>
-                </select>
-            </div>
-            <!-- Roulette POI-->
-            <div class="wrapper2" id="POIDisplay">
-                <div class="box POI"><img src="images/maps/Broken_Moon_POI/Random_sky.gif" alt="POI set" id="POI_sky"></div>
-                <div class="box POI"><img src="images/maps/Broken_Moon_POI/Random_base.gif"alt="POI set" id="POI_base"></div>
-                <div class="box POI"><img src="images/maps/Broken_Moon_POI/Random_view.gif"alt="POI set" id="POI_view"></div>
-            </div>
         </div>
       <!-- Script-->
         <script src="script/main.js" type="module"></script>

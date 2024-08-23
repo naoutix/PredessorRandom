@@ -1,5 +1,5 @@
 export {Game};
-import { ARs,LMGS,SMGs,Marksman,Pistols,Shotguns,Snipers,POI_Name_Kings_Canyon,POI_Name_Worlds_Edge,POI_Name_Olympus,POI_Name_Storm_Point,POI_Name_Broken_Moon } from './main.js';
+//import { } from './main.js';
 import {generateFirstElement,generateSecondElement,generateThirdElement,generateRedundancy} from './random.js'
 //Create a class called Game
 
@@ -10,27 +10,10 @@ class Game {
     choose1 = 0
     choose2 = 0
     choose3 = 0
-    mode = "Trio"
-    Weapons = []
-    WeaponsName = []
 
     static playerState = new Set(['soloPick','NotSoloPick']);
 
     constructor() {
-        this.Weapons = new Map([['ARs',ARs],
-        ['LMGS',LMGS],
-        ['SMGs',SMGs],
-        ['Marksman',Marksman],
-        ['Pistols',Pistols],
-        ['Shotguns',Shotguns],
-        ['Snipers',Snipers]])
-        this.WeaponsName = ['ARs',
-        'LMGS',
-        'SMGs',
-        'Marksman',
-        'Pistols',
-        'Shotguns',
-        'Snipers']
 
     }
 
@@ -47,11 +30,10 @@ class Game {
      * @param {Array<String>} legendsSelected3
      * @memberof Game
      */
-    updateFreeLegends(mode,legendsSelected1,legendsSelected2,legendsSelected3) {
+    updateFreeLegends(legendsSelected1,legendsSelected2,legendsSelected3) {
         this.legendsFree1 = this.#updateFreeLegends(this.legendsFree1,legendsSelected1)
         this.legendsFree2 = this.#updateFreeLegends(this.legendsFree2,legendsSelected2)
         this.legendsFree3 = this.#updateFreeLegends(this.legendsFree3,legendsSelected3)
-        this.mode = mode
 
         let LengthSelectedLegends = [legendsSelected1.length,legendsSelected2.length,legendsSelected3.length]
         let legendsFree = [this.legendsFree1,this.legendsFree2,this.legendsFree3]
@@ -116,13 +98,9 @@ class Game {
     }
 
     generateRandomPlayer() {
-        if (this.mode == "Trio"){
-            return this.#generate3RandomPlayer()
-        }
-        else {
-            return this.#generate2RandomPlayer()
-        }
+        return this.#generate3RandomPlayer()
     }
+
     #generate3RandomPlayer(){
         let {indice , SortListElement : LegendsFreeSort} = this.#sort(this.legendsFree1,this.legendsFree2,this.legendsFree3)
 
@@ -160,32 +138,6 @@ class Game {
         }
 
         return OrderChoose
-    }
-    #generate2RandomPlayer(){
-        let LegendsFreeSort = [this.legendsFree1,this.legendsFree2]
-        this.choose1 = generateFirstElement(LegendsFreeSort)
-        this.choose2 = generateSecondElement(this.mode,LegendsFreeSort,this.choose1)
-        return [this.choose1,this.choose2]
-    }
-
-    generateTwoWeapon() {
-        let random1 = generateRedundancy(this.WeaponsName)
-        let random2 = generateRedundancy(this.WeaponsName)
-        let NomCategorie1 = this.WeaponsName[random1]
-        let NomCategorie2 = this.WeaponsName[random2]
-        let categorie1 = this.Weapons.get(NomCategorie1)
-        let categorie2 = this.Weapons.get(NomCategorie2)
-        random1 = generateRedundancy(categorie1)
-        random2 = generateRedundancy(categorie2)
-        let weapon1 = categorie1[random1]
-        let weapon2 = categorie2[random2]
-        return [[weapon1,NomCategorie1],[weapon2,NomCategorie2]]
-    }
-
-    generatePOI(map){
-        let map_POI = eval('POI_Name_'+map)
-        return map_POI[generateRedundancy(map_POI)]
-
     }
 
     rebuild(){

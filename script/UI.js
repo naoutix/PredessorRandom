@@ -40,50 +40,28 @@ class UI {
         this.name1 = document.getElementById("OutP1")
         this.name2 = document.getElementById("OutP2")
         this.name3 = document.getElementById("OutP3")
-        this.weapon1 = document.getElementById("weapon1")
-        this.weapon2 = document.getElementById("weapon2")
-        this.weaponName1 = document.getElementById("weapon1Name")
-        this.weaponName2 = document.getElementById("weapon2Name")
         this.codeLegends1 = document.getElementById("CodeLegends1")
         this.codeLegends2 = document.getElementById("CodeLegends2")
         this.codeLegends3 = document.getElementById("CodeLegends3")
-
-        this.POI_sky = document.getElementById("POI_sky")
-        this.POI_view = document.getElementById("POI_view")
-        this.POI_base = document.getElementById("POI_base")
-        this.map = document.getElementById("Map Select")
-        this.WeaponMod = document.getElementById("modeWeapon")
-        this.mapMod = document.getElementById("modeMAP")
     }
 
     resetUI(){
         this.player1.src = 'images/random1.gif'
         this.player2.src = 'images/random2.gif'
         this.player3.src = 'images/random3.gif'
-        this.weapon1.src = 'images/weapons/randomWeapon1.gif'
-        this.weapon2.src = 'images/weapons/randomWeapon2.gif'
-        this.POI_sky.src  = 'images/maps/'+this.map.value+'_POI/Random_sky.gif'
-        this.POI_base.src = 'images/maps/'+this.map.value+'_POI/Random_base.gif'
-        this.POI_view.src = 'images/maps/'+this.map.value+'_POI/Random_view.gif'
 
         this.name1.innerHTML = "???"
         this.name2.innerHTML = "???"
         this.name3.innerHTML = "???"
-        this.weaponName1.innerHTML = "???"
-        this.weaponName2.innerHTML = "???"
 
         let legendsSelected1 = this.selectedLegend(this.myTable1)
         let legendsSelected2 = this.selectedLegend(this.myTable2)
         let legendsSelected3 = this.selectedLegend(this.myTable3)
-        let map = this.map.value
         clearTimeout(this.timeout1)
         clearTimeout(this.timeout2)
         clearTimeout(this.timeout3)
-        clearTimeout(this.timeoutWeapon1)
-        clearTimeout(this.timeoutWeapon2)
-        clearInterval(this.timeoutPOI_map)
 
-        return {legendsSelected1,legendsSelected2,legendsSelected3,map}
+        return {legendsSelected1,legendsSelected2,legendsSelected3}
     }
     /**
      * Check selected legends with UI
@@ -162,39 +140,10 @@ class UI {
         return code       
     }
 
-    updateUIlegends(mode,numeroLegends){
+    updateUIlegends(numeroLegends){
         this.timeout1 = setTimeout(changeimageLegends.bind(null,this.player1,NameNumber[numeroLegends[0]],this.name1),1000)
         this.timeout2 = setTimeout(changeimageLegends.bind(null,this.player2,NameNumber[numeroLegends[1]],this.name2),3000)
-        if (mode == "Trio"){
-            this.timeout3 = setTimeout(changeimageLegends.bind(null,this.player3,NameNumber[numeroLegends[2]],this.name3),6000)
-        }
-    }
+        this.timeout3 = setTimeout(changeimageLegends.bind(null,this.player3,NameNumber[numeroLegends[2]],this.name3),6000)
 
-    updateUIweapons(Weapons){
-        this.timeoutWeapon1 = setTimeout(changeimageWeapons.bind(null,this.weapon1,Weapons[0][1],Weapons[0][0],this.weaponName1),1000)
-        this.timeoutWeapon2 = setTimeout(changeimageWeapons.bind(null,this.weapon2,Weapons[1][1],Weapons[1][0],this.weaponName2),3000)
-
-    }
-
-    updateUImaps(POI_map){
-        this.timeoutPOI_map = setTimeout(changeimagePOI.bind(null,this.POI_sky,this.POI_base,this.POI_view,this.map.value,POI_map),3000)
-    }
-
-    updateUIWeaponMod(state){
-        if (state=="On"){
-            this.WeaponMod.checked = true
-        }
-        else {
-            this.WeaponMod.checked = false
-        }
-    }
-
-    updateUIMapMod(state){
-        if (state=="On"){
-            this.mapMod.checked = true
-        }
-        else {
-            this.mapMod.checked = false
-        }        
     }
 }
